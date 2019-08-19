@@ -262,7 +262,6 @@ def get_print_format(doctype, print_format):
 			</div>
 			</html>
 			"""
-			frappe.throw(frappe.TemplateNotFoundError)
 
 def make_layout(doc, meta, format_data=None):
 	"""Builds a hierarchical layout object from the fields list to be rendered
