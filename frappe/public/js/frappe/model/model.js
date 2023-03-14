@@ -447,6 +447,10 @@ $.extend(frappe.model, {
 	},
 
 	can_share: function (doctype, frm) {
+		if (cint(frappe.sys_defaults.disable_document_sharing)) {
+			return false;
+		}
+
 		if (frm) {
 			return frm.perm[0].share === 1;
 		}
